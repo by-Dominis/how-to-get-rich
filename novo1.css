@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: fantasy;
+  padding: 20px;
+  background: #f1f1f1;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 110px;
+  font-size: 80px;
+  text-align: center;
+  background: url(zlato.jpg) center center/cover no-repeat;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: right;
+  width: 25%;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.img {
+  pointer-events: none;
+  background-color: #aaa;
+  width: 8,5in;
+  high: 11in;
+  padding: 100px;
+  image: url(Infografika-Uspjeh–engleski.jpg) center/cover center no-repeat;
+}
+.video {
+  width: 100%;
+  height: auto;
+}
+.content-columns-2 {
+  float: right;
+  width: 25%;
+  padding-left: 20px;
+}
+.fakeimg1 {
+  background-color: #aaa;
+  width: 100%;
+  padding: 40px;
+  background: url(ideja.jpg) center center/cover no-repeat;
+}
+.primary {
+template-columns: 1fr, 1fr;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 15px;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.page-footer {
+  padding: 30px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn, .page-footer, .content-columns-2, .fakeimg1, .header {
+    width: 100%;
+    padding: 0;
+  }
+}
